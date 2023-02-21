@@ -10,4 +10,4 @@ const multiDimArr: [number, number?][] = [
 
 const notEmptyArr: [number, ...number[]] = [1]
 
-const roArr: readonly number[] = [1, 2, 3]
+const readOnlyArr: readonly number[] = [1, 2, 3]

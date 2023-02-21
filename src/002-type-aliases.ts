@@ -1,12 +1,9 @@
+// TYPES
+
 type Person = {
     name: string,
     age: number,
     isAdmin?: boolean
-}
-
-const Alice: Person = {
-    name: 'Alice',
-    age: 25
 }
 
 type Cat = {
@@ -19,8 +16,17 @@ type Dog = {
     barks: boolean
 } 
 
-type CatOrDog = Cat | Dog   // МОЖЕТ включать свойства Cat и Dog
-type CatAndDog = Cat & Dog  // ДОЛЖЕН включать свойства Cat и Dog
+// UNION AND INTERSECTION
+
+type CatOrDog = Cat | Dog   // MUST includes properties of Cat and Dog
+type CatAndDog = Cat & Dog  // MAY includes properties of Cat and Dog
+
+// EXAMPLES
+
+const Alice: Person = {
+    name: 'Alice',
+    age: 25
+}
 
 const Rex: CatAndDog = {
     name: 'Rex',

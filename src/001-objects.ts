@@ -6,6 +6,8 @@ const Alice: {
     age: 25
 }
 
+// CLASS
+
 class Person {
     name: string
     age: number
@@ -16,6 +18,8 @@ class Person {
 }
 
 const Bob = new Person('Bob', 27)
+
+// KEY SIGNATURE
 
 let hexDigits: {
     [id: string]: number
@@ -28,6 +32,8 @@ let hexDigits: {
     'F': 15
 }
 
+// READONLY PROPERTIES
+
 let Eve: {
     readonly name: string,
     isAdmin?: boolean
@@ -35,4 +41,4 @@ let Eve: {
     name: 'Eve'
 }
 
-// Eve.name = 'Eveline'
+// Eve.name = 'Eveline' // Error!
