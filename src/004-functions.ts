@@ -50,3 +50,22 @@ const range: RangeFn = (from: number, to?: number, step?: number): number[] => {
 console.log(range(10))
 console.log(range(10, 20))
 console.log(range(10, 20, 2))
+
+// POLYMORPHISM
+
+type FilterFn <T> = {
+    (elem: T): boolean
+}
+
+function filter <T> (arr: T[], fn: FilterFn <T> ) {
+    const result = []
+    for (const elem of arr) {
+        if (fn(elem)) {
+            result.push(elem)
+        }
+    }
+    return result
+}
+
+console.log(filter([1, 2, 3, 4, 5], elem => elem % 2 === 0 ))
+console.log(filter<string>(['say', 'goodbye', 'to', 'yesterday'], elem => elem.length < 4 )) // explicitly
